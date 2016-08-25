@@ -21,7 +21,7 @@ int main()
 
     for (int i = 0; i < 11; i++)
     {
-        mem->write(i + 1, code[i]);
+        mem->write(cpu->FIRST_ADDR + i, code[i]);
     }
 
     cpu->run();

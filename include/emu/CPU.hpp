@@ -18,11 +18,12 @@ namespace emu {
 
     class CPU
     {
-        private:
+        public:
             const byte OP_ADDR;
             const byte FIRST_ADDR;
             const byte MAX_ADDR;
 
+        private:
             emu::Memory* m_mem;
 
             byte m_counter;
