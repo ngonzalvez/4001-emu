@@ -1,10 +1,10 @@
 #include <iostream>
-#include "emu86/CPU.hpp"
+#include "emu/CPU.hpp"
 
 using namespace std;
 
 
-namespace emu86 {
+namespace emu {
 
     CPU::CPU(Memory* mem)
         :

@@ -1,10 +1,10 @@
 #ifndef _EMU86_CPU_HPP_
 #define _EMU86_CPU_HPP_
 
-#include "emu86/Memory.hpp"
+#include "emu/Memory.hpp"
 
 
-namespace emu86 {
+namespace emu {
 
     enum OPERATIONS {
         HALT,
@@ -23,7 +23,7 @@ namespace emu86 {
             const byte FIRST_ADDR;
             const byte MAX_ADDR;
 
-            emu86::Memory* m_mem;
+            emu::Memory* m_mem;
 
             byte m_counter;
             byte m_reg0;
@@ -38,7 +38,7 @@ namespace emu86 {
             /**
              * Constructor.
              */
-            CPU(emu86::Memory* mem);
+            CPU(emu::Memory* mem);
 
             /**
              * Destructor.

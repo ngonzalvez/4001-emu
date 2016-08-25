@@ -1,7 +1,7 @@
 #include <iostream>
-#include "emu86/emu86.hpp"
+#include "emu/emu.hpp"
 
-using namespace emu86;
+using namespace emu;
 using namespace std;
 
 

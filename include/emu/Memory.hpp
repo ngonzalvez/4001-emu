@@ -1,7 +1,7 @@
 #ifndef _EMU86_MEMORY_HPP_
 #define _EMU86_MEMORY_HPP_
 
-namespace emu86 {
+namespace emu {
 
     typedef unsigned char byte;
 
