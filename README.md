@@ -28,3 +28,15 @@ CP0            | Copy the value in register 0 into register 1.
 CP1            | Copy the value in register 1 into register 0.
 BEL            | Make the computer "beep".
 HAL            | Stop execution. 
+
+## Compilation
+~~~
+mkdir build
+cd build
+cmake ..
+~~~
+
+## Running a program
+~~~
+./bin/emu `<path_to_program>`
+~~~
