@@ -6,7 +6,7 @@
 
 namespace emu {
 
-    enum OPERATIONS {
+    enum OP {
         HALT,
         LOAD0,
         LOAD1,
