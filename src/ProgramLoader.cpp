@@ -64,7 +64,7 @@ namespace emu {
         {
             load(ADD);
         }
-        else if (op == "BEEP")
+        else if (op == "BEL")
         {
             load(BEEP);
         }
