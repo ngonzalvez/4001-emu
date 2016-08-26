@@ -13,13 +13,16 @@ namespace emu {
         ADD,
         BEEP,
         PRINT,
-        STORE
+        STORE,
+        JMP,
+        JMP_EQ
     };
 
     class CPU
     {
         public:
             const byte OP_ADDR;
+            const byte JMP_ADDR;
             const byte FIRST_ADDR;
             const byte MAX_ADDR;
 
@@ -81,6 +84,16 @@ namespace emu {
              * register 1.
              */
             void store();
+
+            /**
+             * Jump to the address stored in the reserved memory address JMP_ADDR.
+             */
+            void jump();
+
+            /**
+             * Jump if register 0 and register 1 have the same value.
+             */
+            void jumpEqual();
     };
      
 }

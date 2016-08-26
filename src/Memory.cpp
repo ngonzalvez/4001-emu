@@ -12,7 +12,6 @@ namespace emu {
         m_storage(new byte[MAX_ADDRESS])
     {
         clear();
-        cout << "Memory initialized" << endl;
     }
 
 

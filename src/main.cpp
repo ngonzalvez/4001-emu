@@ -5,24 +5,34 @@ using namespace emu;
 using namespace std;
 
 
-int main()
+int main(void)
 {
     Memory *mem = new Memory();
     CPU *cpu = new CPU(mem);
-    byte code[11] = {
-        LOAD0, 1,
-        LOAD1, 2, 
-        ADD,
-        STORE, 12,
-        PRINT, 12,
-        BEEP,
-        HALT
+
+    cout << "CPU & Memory initialized" << endl;
+
+    int codeLength = 18;
+    byte code[codeLength] = {
+        LOAD0, 1,   // 2 
+        JMP, 16,    // 4 
+        JMP_EQ, 15, // 6
+        ADD,        // 8
+        STORE, 15,  // 9
+        PRINT, 15,  // 11
+        BEEP,       // 13
+        HALT,       // 14
+        0,          // 15
+        LOAD1, 1,   // 16
+        JMP, 8      // 18
     };
 
-    for (int i = 0; i < 11; i++)
+    for (int i = 0; i < codeLength; i++)
     {
         mem->write(cpu->FIRST_ADDR + i, code[i]);
     }
+
+    cout << "Default program loaded" << endl;
 
     cpu->run();
 
