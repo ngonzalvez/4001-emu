@@ -31,7 +31,7 @@ HAL            | Stop execution.
 
 ## Compilation
 ~~~
-mkdir build
+mkdir -p build
 cd build
 cmake ..
 ~~~
@@ -40,3 +40,5 @@ cmake ..
 ~~~
 ./bin/emu `<path_to_program>`
 ~~~
+
+You can write your own programs or check out the examples in the `examples` folder.
