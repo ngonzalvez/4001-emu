@@ -79,6 +79,16 @@ namespace emu {
             void add();
 
             /**
+             * Load the given address into register 0.
+             */
+            void load0();
+
+            /**
+             * Load the given address into register 1.
+             */
+            void load1();
+
+            /**
              * Stop the execution of the code in memory.
              */
             void halt();

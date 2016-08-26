@@ -77,13 +77,11 @@ namespace emu {
                 break;
 
             case LOAD0:
-                m_reg0 = m_mem->read(m_counter);
-                m_counter++;
+                load0();
                 break;
 
             case LOAD1:
-                m_reg1 = m_mem->read(m_counter);
-                m_counter++;
+                load1();
                 break;
 
             case BEEP:
@@ -131,6 +129,22 @@ namespace emu {
     void CPU::add()
     {
         m_reg0 = m_reg0 + m_reg1;
+    }
+
+
+    void CPU::load0() 
+    {
+        m_reg0 = m_mem->read(m_counter);
+        m_counter++;
+        m_reg0 = m_mem->read(m_reg0);
+    }
+
+
+    void CPU::load1() 
+    {
+        m_reg1 = m_mem->read(m_counter);
+        m_counter++;
+        m_reg1 = m_mem->read(m_reg1);
     }
 
 
