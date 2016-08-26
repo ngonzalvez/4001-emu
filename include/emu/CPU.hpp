@@ -16,6 +16,8 @@ namespace emu {
         STORE,
         JMP,
         JMP_EQ,
+        CLEAR0,
+        CLEAR1,
         COPY0,
         COPY1
     };
@@ -96,6 +98,16 @@ namespace emu {
              * Jump if register 0 and register 1 have the same value.
              */
             void jumpEqual();
+
+            /**
+             * Clear register 0.
+             */
+            void clear0();
+
+            /**
+             * Clear register 1.
+             */
+            void clear1();
 
             /**
              * Copy register 0 to register 1.

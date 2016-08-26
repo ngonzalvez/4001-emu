@@ -109,6 +109,14 @@ namespace emu {
                 jumpEqual();
                 break;
 
+            case CLEAR0:
+                clear0();
+                break;
+
+            case CLEAR1:
+                clear1();
+                break;
+
             case COPY0:
                 copy0();
                 break;
@@ -157,6 +165,18 @@ namespace emu {
             // Skip the address byte.
             m_counter++;
         }
+    }
+
+
+    void CPU::clear0() 
+    {
+        m_reg0 = 0;
+    }
+
+
+    void CPU::clear1()
+    {
+        m_reg1 = 0;
     }
 
 
