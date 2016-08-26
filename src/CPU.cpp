@@ -108,6 +108,14 @@ namespace emu {
             case JMP_EQ:
                 jumpEqual();
                 break;
+
+            case COPY0:
+                copy0();
+                break;
+
+            case COPY1:
+                copy1();
+                break;
         }
     }
 
@@ -151,5 +159,17 @@ namespace emu {
         }
     }
 
+
+    void CPU::copy0()
+    {
+        m_reg1 = m_reg0;
+    }
+
+
+
+    void CPU::copy1() 
+    {
+        m_reg0 = m_reg1;
+    }
 }
 

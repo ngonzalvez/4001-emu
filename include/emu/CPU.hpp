@@ -15,7 +15,9 @@ namespace emu {
         PRINT,
         STORE,
         JMP,
-        JMP_EQ
+        JMP_EQ,
+        COPY0,
+        COPY1
     };
 
     class CPU
@@ -94,6 +96,16 @@ namespace emu {
              * Jump if register 0 and register 1 have the same value.
              */
             void jumpEqual();
+
+            /**
+             * Copy register 0 to register 1.
+             */
+            void copy0();
+
+            /**
+             * Copy register 1 to register 0.
+             */
+            void copy1();
     };
      
 }
