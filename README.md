@@ -13,18 +13,18 @@ The CPU consists of:
 ## Operations
 This is a list of available operations.
 
-Operation Code  | Description
-----------------|--------------------------------------------------------------
-LOAD0 `<addr>`  | Load the value in the given memory address into register 0.
-LOAD1 `<addr>`  | Load the value in the given memory address into register 1.
-ADD             | Add both registers and store the result in register 0.
-HALT            | Stop execution. 
-BEEP            | Make the computer "beep".
-PRINT `<addr>`  | Print the value in the given memory address.
-STORE `<addr>`  | Store the value in register 0 in the given memory address.
-JMP `<addr>`    | Jump to the given memory address.
-JMP_EQ `<addr>` | Jump to the given memory address if both registers are equal.
-CLEAR0          | Set the register 0 to zero.
-CLEAR1          | Set the register 1 to zero.
-COPY0           | Copy the value in register 0 into register 1.
-COPY1           | Copy the value in register 1 into register 0.
+Operation Code | Description
+---------------|--------------------------------------------------------------
+LD0 `<addr>`   | Load the value in the given memory address into register 0.
+LD1 `<addr>`   | Load the value in the given memory address into register 1.
+ADD            | Add both registers and store the result in register 0.
+STR `<addr>`   | Store the value in register 0 in the given memory address.
+PRT `<addr>`   | Print the value in the given memory address.
+JMP `<addr>`   | Jump to the given memory address.
+JPE `<addr>`   | Jump to the given memory address if both registers are equal.
+CL0            | Set the register 0 to zero.
+CL1            | Set the register 1 to zero.
+CP0            | Copy the value in register 0 into register 1.
+CP1            | Copy the value in register 1 into register 0.
+BEL            | Make the computer "beep".
+HAL            | Stop execution. 
